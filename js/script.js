@@ -1,0 +1,20 @@
+(function(){
+    //theme.switching
+    document.querySelector('.theme-btn').addEventListener('click',() =>{
+        document.body.classList.toggle('light-mode');
+    });
+
+
+    [...document.querySelectorAll('.control')].forEach(item => {
+        item.addEventListener('click', function(){
+            /* remove active-btn class from active link */
+            document.querySelector('.active-btn').classList.remove('active-btn');
+            //adding active-btn to current clicked link
+            this.classList.add('active-btn');
+            //removing the active class from section (which is currently active)
+            document.querySelector('.active').classList.remove('active');
+            //add to the section which match section id with data set id
+            document.getElementById(item.dataset.id).classList.add('active')
+        })
+    })
+})()

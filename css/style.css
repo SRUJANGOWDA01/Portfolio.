@@ -115,7 +115,7 @@ section {
 }
 
 .header-content .left-header .image {
-    height: 90%;
+    height: 100%;
     width: 68%;
     border-radius: var(--br-sm-2);
     margin-left: 4rem;
@@ -454,4 +454,261 @@ section {
 
 .timeline-item p:last-child {
     color:  var(--color-grey-4);
+}
+
+/* portfolio */
+.portfolio .portfolio-stats {
+    padding-bottom: 4rem;
+}
+
+.portfolio .portfolio-stats .stat-title{
+    margin-top: 5rem;
+}
+.portfolio-stats .progress-bars{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+}
+
+.portfolio-stats .progress-bars .progress-bar{
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-bar .pro-title{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.progress-bar .progress-con{
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar .progress-con .progress{
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--color-gray-4);
+    margin-left: 1rem;
+    position: relative;
+}
+
+.progress-bar .progress-con .progress span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--color-secondary);
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.progress-bar .progress-con .progress .html{
+    width: 90%;
+}
+
+.progress-bar .progress-con .progress .css{
+    width: 90%;
+}
+.progress-bar .progress-con .progress .js{
+    width: 70%;
+}
+.progress-bar .progress-con .progress .react{
+    width: 90%;
+}
+.progress-bar .progress-con .progress .node{
+    width: 90%;
+}
+.progress-bar .progress-con .progress .express{
+    width: 40%;
+}
+.progress-bar .progress-con .progress .mongo{
+    width: 50%;
+}
+
+/* social media */
+.portfolio .social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portfolio .social-media .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.social-icons  .social-icon{
+    font-size: 1.4rem;
+    background-color: var(--color-gray-4);
+    color: var(--color-grey-0);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.social-icons .social-icon.active{
+    background-color: var(--color-secondary);
+}
+
+/* projects */
+.blogs .proj-text {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--color-grey-3);
+}
+
+.blogs .projects {
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+
+.projects .project-item {
+    position: relative;
+    border-radius: 3rem;
+}
+.projects .project-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.projects .project-item .hover-items {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-secondary);
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out;
+}
+.projects .project-item .hover-items h3 {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.projects .project-item .hover-items .iocns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .project-item .hover-items .icons .icon {
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.projects .project-item:hover .hover-items {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.projects .project-item .hover-items .icons .icon i {
+    font-size: 1.3rem;
+    color: var(--color-white);
+    margin: 1rem;
+}
+
+.projects .project-item .hover-items .icons .icon:hover i {
+    color: var(--color-secondary);
+}
+
+/* contact section */
+
+.contact-content {
+    display: flex;
+    padding-top: 4rem;
+}
+
+.contact-content .left-contact {
+    flex: 2;
+}
+.contact-content .left-contact h4 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.contact-content .left-contact p {
+    margin: 1rem 0;
+    line-height: 2rem;
+}
+
+.left-contact .contact-info .contact-item  {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.left-contact .contact-info .contact-item p  {
+   margin: 0.3rem 0 !important;
+   padding: 0 !important;
+}
+
+.left-contact .contact-info .contact-item .icon {
+    display: grid;
+    grid-template-columns: 40 1fr;
+}
+.left-contact .contact-info .contact-item .icon i {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+/* right contact */
+.right-contact {
+    flex: 3;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+.right-contact .input-control {
+    margin: 1.5rem 0;
+}
+
+.right-contact .input-control input,
+.right-contact .input-control textarea {
+    border-radius: 10px;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.8rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-grey-5);
+    width: 100%;
+    color: var(--color-white);
+    resize: none;
+}
+
+.right-contact .input-control.inp2 {
+    display: flex;
+    gap: 10px;
+}
+.right-contact .input-control input[type="submit"] {
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    font-weight: 800;
 }

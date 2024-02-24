@@ -18,3 +18,16 @@
         })
     })
 })()
+
+function handler () {
+    [...document.querySelectorAll('.social-icon')].forEach(item => {
+        // console.log(`item =`, item.classList)
+        item.addEventListener("click",function(){
+            document.querySelector('.active').classList.remove('active');
+            console.log(`single=`, this.classList)
+            this.classList.add('active')
+        })
+    })
+}
+
+handler()

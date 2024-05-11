@@ -544,7 +544,7 @@ section {
 .social-icons  .social-icon{
     font-size: 1.4rem;
     background-color: var(--color-gray-4);
-    color: var(--color-grey-0);
+    color: var(--color-black);
     padding: 12px;
     border-radius: 10px;
 }
